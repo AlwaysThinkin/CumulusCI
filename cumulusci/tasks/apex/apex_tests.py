@@ -20,16 +20,12 @@ APEX_LIMITS = {
     'MobilePush': {'Label': 'TESTING_LIMITS: Number of Mobile Apex push calls', 'SYNC': 10, 'ASYNC': 10},
     'Sosl': {'Label': 'TESTING_LIMITS: Number of SOSL queries', 'SYNC': 20, 'ASYNC': 20},
     'Callouts': {'Label': 'TESTING_LIMITS: Number of callouts', 'SYNC': 100, 'ASYNC': 100},
-    # Queueable
-    # Heap
 }
 
 
 TEST_RESULT_QUERY = """
-SELECT Id,ApexClass.Name,ApexClassId,
-       ApexLogId,TestTimestamp,
+SELECT Id,ApexClassId,TestTimestamp,
        Message,MethodName,Outcome,
-       QueueItem.Status,QueueItem.ExtendedStatus,
        RunTime,StackTrace,
        (SELECT 
           Id,Callouts,AsyncCalls,DmlRows,Email,
