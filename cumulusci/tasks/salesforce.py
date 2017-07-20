@@ -1332,7 +1332,7 @@ class RunApexTests(BaseSalesforceApiTask):
         return result
 
     def _get_test_results(self):
-        result = self.tooling.query_all("SELECT StackTrace, Message, " +
+        result = self.tooling.query_all("SELECT Id, StackTrace, Message, " +
             "ApexLogId, AsyncApexJobId, MethodName, Outcome, ApexClassId, " +
             "TestTimestamp FROM ApexTestResult " +
             "WHERE AsyncApexJobId = '{}'".format(self.job_id))

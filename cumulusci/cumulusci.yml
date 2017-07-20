@@ -118,6 +118,9 @@ tasks:
     query:
         description: Queries the connected org
         class_path: cumulusci.tasks.salesforce.SOQLQuery
+    query_to_db:
+        description: Query to a db using a mapping YAML
+        class_path: cumulusci.tasks.bulkdata.QueryData
     retrieve_packaged:
         description: Retrieves the packaged metadata from the org
         class_path: cumulusci.tasks.salesforce.RetrievePackaged
@@ -145,7 +148,7 @@ tasks:
             revert_path: src.orig
     run_tests:
         description: Runs all apex tests
-        class_path: cumulusci.tasks.salesforce.RunApexTests
+        class_path: cumulusci.tasks.apex_tests.RunApexTests
     run_tests_debug:
         description: Runs all apex tests
         class_path: cumulusci.tasks.salesforce.RunApexTestsDebug
