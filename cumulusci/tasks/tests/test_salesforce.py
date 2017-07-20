@@ -87,7 +87,7 @@ class TestRunApexTests(unittest.TestCase):
             json=expected_response)
 
     def _mock_get_test_results(self):
-        url = (self.base_tooling_url + 'query/?q=%0ASELECT+Id%2CApexClass.Name%2C%0A+++++++ApexLogId%2CTestTimestamp%2C%0A+++++++Message%2CMethodName%2COutcome%2C%0A+++++++QueueItem.Status%2CQueueItem.ExtendedStatus%2C%0A+++++++RunTime%2CStackTrace%2C%0A+++++++%28SELECT+%0A++++++++++Id%2CCallouts%2CAsyncCalls%2CDmlRows%2CEmail%2C%0A++++++++++LimitContext%2CLimitExceptions%2CMobilePush%2C%0A++++++++++QueryRows%2CSosl%2CCpu%2CDml%2CSoql+%0A++++++++FROM+ApexTestResults%29+%0AFROM+ApexTestResult+%0AWHERE+AsyncApexJobId%3D%27JOB_ID1234567%27%0A')
+        url = (self.base_tooling_url + 'query/?q=%0ASELECT+Id%2CApexClass.Name%2CApexClassId%2C%0A+++++++ApexLogId%2CTestTimestamp%2C%0A+++++++Message%2CMethodName%2COutcome%2C%0A+++++++QueueItem.Status%2CQueueItem.ExtendedStatus%2C%0A+++++++RunTime%2CStackTrace%2C%0A+++++++%28SELECT+%0A++++++++++Id%2CCallouts%2CAsyncCalls%2CDmlRows%2CEmail%2C%0A++++++++++LimitContext%2CLimitExceptions%2CMobilePush%2C%0A++++++++++QueryRows%2CSosl%2CCpu%2CDml%2CSoql+%0A++++++++FROM+ApexTestResults%29+%0AFROM+ApexTestResult+%0AWHERE+AsyncApexJobId%3D%27JOB_ID1234567%27%0A')
         expected_response = {
             'done': True,
 
