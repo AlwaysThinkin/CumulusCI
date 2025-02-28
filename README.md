@@ -8,7 +8,7 @@ CumulusCI is a command line tool belt and set of reusable Python classes useful 
 
 # Key Features
 
-* Out of the box, CumulusCI provides a complete best practice development and release process based on the processes used by Salesforce.org to build and release managed packages to thousands of users
+* Out of the box, CumulusCI provides a complete best practice development and release process based on the processes used by Salesforce.org to build and release managed packages to thousands of users.
 * Flexible and pluggable system for running tasks (single actions) and flows (sequences of tasks)
 * OAuth based org keychain allowing easy connection to Salesforce orgs and stored in local files using AES encryption
 
